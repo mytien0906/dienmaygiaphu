@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 :root {
     --animate-duration: 1s;
@@ -8,6 +9,7 @@
     --dark-bg-color: #e6bf00;
     --light-bg-color: #fed700;
     --border-color: #664b2b;
+    --heading-text-color: #8e683b;
 }
 
 p {
@@ -36288,9 +36290,13 @@ div.menu_mobi, div.menu_mobi_add {
     font-family: 'Roboto', sans-serif;
     padding: 5px;
     border: 1px solid #ebebeb;
-    margin: 0px 10px;
+    margin-right: 10px;
     transition: .4s;
     border-radius: 4px;
+}
+
+.cover-content.list-products {
+    margin-right: 0;
 }
 
 .cover-content.pos-relative {
@@ -36378,7 +36384,8 @@ div.menu_mobi, div.menu_mobi_add {
 .info_btn {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .info_btn .btn-add {
@@ -36680,8 +36687,15 @@ div.menu_mobi, div.menu_mobi_add {
 
 .tabbed-content {
     font-family: 'Roboto', sans-serif;
-    text-align: center;
+    /* text-align: center; */
     padding-bottom: 40px;
+}
+
+.tabbed-content h3 {
+    color: var(--heading-text-color);
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
 .tabbed-content.title {
@@ -36703,7 +36717,7 @@ div.menu_mobi, div.menu_mobi_add {
 }
 
 .tabbed-content .nav-link.active {
-    border-bottom: 3px solid #000;
+    /* border-bottom: 3px solid #000; */
 }
 
 .tabbed-content .nav, .tabbed-content .tab-panels {
@@ -36719,9 +36733,9 @@ div.menu_mobi, div.menu_mobi_add {
     display: inline-block;
     list-style: none;
     margin: 0;
-    padding: 30px 0 0;
+    /* padding: 30px 0 0; */
     position: relative;
-    margin: 0 7px;
+    /* margin: 0 7px; */
     transition: background-color .3s;
 }
 
@@ -37661,6 +37675,41 @@ a.active.show {
 .nav>li>.sub-menu {
     top: 40px;
     left: 0;
+}
+
+ul.nav.nav-tabs-criteria {
+    background: #fed700;
+    height: 40px;
+    display: inline-block;
+    width: unset;
+}
+
+ul.nav.nav-tabs-criteria li {
+    padding: 0;
+}
+
+ul.nav.nav-tabs-criteria li a {
+    font-size: 14px;
+    color: #614829;
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+ul.nav.nav-tabs-criteria li a.nav-link.active{
+    font-size: 14px;
+    color: #614829;
+    font-family: 'Roboto';
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    cursor: pointer;
+    transition: .2s;
+    background: #614829!important;
+    color: #fff!important;
 }
 
 .center {

@@ -73,6 +73,7 @@
     $config['news'][$nametype]['view'] = true;
     $config['news'][$nametype]['slug'] = true;
     $config['news'][$nametype]['copy'] = true;
+
     $config['news'][$nametype]['bando'] = false;
     $config['news'][$nametype]['images'] = true;
     $config['news'][$nametype]['show_images'] = true;

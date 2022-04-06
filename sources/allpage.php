@@ -28,15 +28,17 @@ $tht = $d->rawQuery("select ten$lang, tenkhongdau$lang, id,photo from #_news whe
 $splistmenu = $d->rawQuery("select ten$lang, tenkhongdau$lang, id,photo,type from #_product_list where type = ? and hienthi > 0 order by id asc", array('san-pham'));
 // var_dump($idl)
 // Lay ra tat ca san pham 
-// $list_all_products = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`motanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product limit 5");
+// $list_all_products = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`mptanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product limit 5");
 // $splistmenu = $d->rawQuery("select #_product_list.id, #_product_list.tenvi, #_product_list.tenkhongdau$lang, #_product_list.photo,
 //  #_product_cat.id, #_product_cat.tenvi, #_product_cat.tenkhongdau$lang, #_product_cat.photo 
 //  FROM #_product_list RIGHT JOIN #_product_cat ON #_product_list.id = #_product_cat.id_list 
 //  WHERE #_product_list.id = ? AND #_product_list.type = ?",array('san-pham'));
 $newproduct = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`motanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product WHERE #_product.type = ? and #_product.hienthi > 0 ORDER BY id DESC limit 8", array('san-pham'));
 $popularproduct = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`motanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product WHERE #_product.type = ? and #_product.hienthi > 0 and table_product.noibat>0", array('san-pham'));
+$popularnew = $d->rawQuery("select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang from #_news where hienthi>0 and noibat>0 order by stt,id desc limit 5", array('tin-tuc'));
 
 $criteria_list = $d->rawQuery("SELECT id,photo FROM `#_photo` WHERE type = ?", array('tieu-chi'));
+$banner_qc = $d->rawQuery("SELECT id,photo FROM `#_photo` WHERE type = ?", array('banner-qc'));
 
 
 $footer = $d->rawQueryOne("select ten$lang, noidung$lang from #_static where type = ? limit 0,1", array('footer'));

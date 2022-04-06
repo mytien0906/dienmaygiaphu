@@ -5,8 +5,8 @@
     $config['product'][$nametype]['title_main'] = "Sản phẩm";
     $config['product'][$nametype]['dropdown'] = true;
     $config['product'][$nametype]['list'] = true;
-    $config['product'][$nametype]['cat'] = true;
-    $config['product'][$nametype]['item'] = true;
+    $config['product'][$nametype]['cat'] = false;
+    $config['product'][$nametype]['item'] = false;
     $config['product'][$nametype]['sub'] = false;
     $config['product'][$nametype]['brand'] = false;
     $config['product'][$nametype]['mau'] = false;
@@ -19,6 +19,11 @@
     $config['product'][$nametype]['copy'] = true;
     $config['product'][$nametype]['copy_image'] = true;
     $config['product'][$nametype]['slug'] = true;
+    
+    $config['product'][$nametype]['check_banchay'] = array('banchay'=>'Bán chạy');
+    $config['product'][$nametype]['check_xemnhieu'] = array('xemnhieu'=>'Xem nhiều');
+    $config['product'][$nametype]['check_hot'] = array("hot" => "Hot nhất");
+    $config['product'][$nametype]['check_khuyenmai'] = array("khuyenmai" => "Đang khuyến mãi");
     $config['product'][$nametype]['check'] = array("noibat" => "Nổi bật");
     $config['product'][$nametype]['images'] = true;
     $config['product'][$nametype]['show_images'] = true;

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
 <!-- San pham noi bat -->
 <div class="banner-fls">
@@ -29,7 +30,7 @@
 </div>
 <!-- San pham moi nhat -->
 <div class="new-product">
-    <div class="fixwidth">
+    <div class="container">
         <div class="tabbed-content">
             <h3>Sản phẩm mới nhất</h3>
         </div>
@@ -55,122 +56,64 @@
                 </div>
             <?php } ?>
         </div>
-        <!-- <div class="row list-product">
-            <?php
-            foreach ($newproduct as $key => $value) {
-            ?>
-                <div class="col-2 cover-content">
-
-                    <a href="<?= $value[$sluglang] ?>" class="image">
-                        <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" windown.location.href="<?php $value[$sluglang] ?>" src="/upload/product/<?= $value['photo'] ?>" alt="">
-                    </a>
-                    <div class="info-wrap">
-                        <div class="full-height">
-                            <a href="<?php echo $value['tenkhongdauvi'] ?>">
-                                <h6><?= $value["tenvi"] ?></h6>
-                            </a>
-                            <?php if ($value['motanganvi']) { ?>
-                                <div class="product-des-wrap">
-                                    <p><?php echo htmlspecialchars_decode($value['motanganvi']) ?>
-                                    </p>
-                                </div>
-                            <?php } ?>
-                        </div>
-                        <div class="price">
-                            <div>
-                                <p><?= $func->convertPrice($value['gia']) ?></p>
-                                <p class="price-discount"><?= $func->convertPrice($value['giamoi']) ?></p>
-                            </div>
-                            <div class="discount"><?= $value['giakm'] ?>%</div>
-                        </div>
-                        <a class="buy" href="lien-he">Liên hệ</a>
-                    </div>
-                </div>
-            <?php }  ?>
-
-
-        </div> -->
     </div>
 </div>
-<!-- San pham noi bat -->
-<div class="new-product">
-    <div class="fixwidth">
-        <div class="tabbed-content">
-            <h3>Sản phẩm phổ biến</h3>
-        </div>
-        <div class="row list-product">
-            <?php
-            foreach ($popularproduct as $key => $value) {
-            ?>
-                <div class="col-2 cover-content">
-                    <div class="product-img">
-                        <a href="<?php $value[$sluglang] ?>" class="image">
-                            <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" windown.location.href="<?php $value[$sluglang] ?>" src="/upload/product/<?= $value['photo'] ?>" alt="">
-                        </a>
-                        <img windown.location.href="<?php $value[$sluglang] ?>" class="img-tag" src="/upload/product/ghe-xanh-loai-1_10de2b42-6e90-4228-a574-025c9fe5961d-removebg-preview.png" alt="">
-                    </div>
-                    <div class="info-wrap">
-                        <div class="full-height">
-                            <a href="<?= $value[$sluglang] ?>">
-                                <h6><?= $value["tenvi"] ?></h6>
-                            </a>
-                            <?php if ($value['motanganvi']) { ?>
-                                <div class="product-des-wrap">
-                                    <p><?php echo htmlspecialchars_decode($value['motanganvi']) ?>
-                                    </p>
-                                </div>
-                            <?php } ?>
+<!-- Danh mục cấp 1 - Hiển thị sản phẩm -->
+<?php
+if (count($splistmenu) > 0) {
+    foreach ($splistmenu as $key => $value) {
+        $_SESSION['idl' . $key] = $value['id'];
+?>
+        <div class="new-product">
+            <div class="container">
+                <div class="tabbed-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><?= $value['ten' . $lang] ?></h3>
                         </div>
-                        <div class="price">
-                            <div>
-                                <p><?= $func->convertPrice($value['gia']) ?></p>
-                                <p class="price-discount"><?= $func->convertPrice($value['giamoi']) ?></p>
-                            </div>
-                            <div class="discount"><?= $value['giakm'] ?>%</div>
+                        <div class="col-md-6">
+                            <ul class="nav nav-tabs nav-tabs-criteria" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" idl="<?= $value['id'] ?>" tab="hot" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="true">Hot nhất</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" idl="<?= $value['id'] ?>" tab="khuyenmai" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="false">Đang khuyến mãi</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" idl="<?= $value['id'] ?>" tab="xemnhieu" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="false">Sản phẩm xem nhiều</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" idl="<?= $value['id'] ?>" tab="banchay" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="false">Sản phẩm bán chạy</a>
+                                </li>
+                            </ul>
                         </div>
-                        <a class="buy" href="lien-he">Liên hệ</a>
                     </div>
                 </div>
-            <?php }  ?>
-        </div>
-    </div>
-</div>
-<!-- Danh muc -->
-<div class="category-block">
-    <div class="tabbed-content">
-        <h3>Album hình ảnh</h3>
-    </div>
-    <div class="fixwidth">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row list-product">
 
-        <div class="row autoplay-product-list">
-            <?php foreach ($album as $key => $value) {
-            ?>
-                <div class="cover-content">
-                    <a class="image" href="#">
-                        <?php if (isset($value['photo'])) { ?>
-                            <div style="
-                            background-image: url('<?= THUMBS ?>/200x100x1/<?= UPLOAD_PHOTO_L . $value['photo'] ?>');
-                            background-size: cover;
-                            height: 230px;
-                            background-repeat: no-repeat;
-                            background-position: top center;
-                            ">
-                            </div>
-                        <?php } ?>
-                    </a>
-
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="big-img" style="
+                        background-image: url('<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $value['photo'] ?>');
+                        background-size: cover;
+                        height:660px;
+                        background-position:center;
+                        "></div>
+                    </div>
                 </div>
-            <?php } ?>
+            </div>
         </div>
-    </div>
-</div>
-<!-- Banner tieu chi -->
-<div class="banner-tieu-chi">
-    <div class="fixwidth">
+<?php }
+} ?>
+<!-- Banner quang cao -->
+<div class="banner-quang-cao">
+    <div class="container">
         <div class="row">
-            <?php foreach ($criteria_list as $key => $value) { ?>
-
-                <div class="col-md-3">
+            <?php foreach ($banner_qc as $key => $value) { ?>
+                <div class="col-md-6">
                     <div class="link-tieu-chi">
                         <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="/upload/photo/<?= $value['photo'] ?>" alt="">
                     </div>
@@ -179,7 +122,27 @@
         </div>
     </div>
 </div>
-
+<!-- Tin tuc noi bat -->
+<div class="new-product">
+    <div class="container">
+        <div class="tabbed-content">
+            <h3>Tin tức nổi bật</h3>
+        </div>
+        <div class="row product-wrap">
+            <?php foreach ($popularnew as $k => $v) {
+                var_dump($popularnew);
+            ?>
+                <div class="col-2 cover-content pos-relative">
+                    <a class="image" href="<?= $v['tenkhongdauvi'] ?>">
+                        <span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
+                    <a href="<?php echo $v['tenkhongdauvi'] ?>">
+                        <h6><?= $v["tenvi"] ?></h6>
+                    </a>
+                    
+            <?php } ?>
+        </div>
+    </div>
+</div>
 
 <!-- <div class="box-thongke-container" id="background-thong-ke">
     <div class="fixwidth" id="background-tieuchi">
@@ -199,3 +162,67 @@
     </div>
 </div> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        var page = parseInt("<?= $page ?>");
+
+
+        showNews();
+
+        function showNews() {
+            var tab = $(this).attr('tab');
+            var idl = "<?= $_SESSION['idl'] ?>";
+            console.log(tab);
+            console.log(idl);
+            $.ajax({
+                url: "ajax/ajax_index_tpl.php",
+                method: "GET",
+                data: {
+                    tab: tab,
+                    idl: idl,
+                },
+                success: function(data) {
+                    var nextPage = page + 1;
+                    $.ajax({
+                        type: "GET",
+                        url: "ajax/ajax_index_tpl.php",
+                        data: {
+                            tab: tab,
+                            idl: idl,
+                            page: nextPage,
+                        },
+                        success: function(data) {
+                            if (data.length <= 0) {
+                                // $('#alert_kq').html("Đã xem hết tin tức")
+                                // document.querySelector(".alert-warning").style.display="block";
+                                return;
+                            }
+                        }
+                    });
+                    $('.list-product').html(data);
+                }
+
+            });
+        }
+
+        $('.nav-link').click(function() {
+            page = parseInt("<?= $page ?>");
+
+            var tab = $(this).attr('tab');
+            var idl = $(this).attr('idl');
+
+            $.ajax({
+                url: "ajax/ajax_index_tpl.php",
+                method: "GET",
+                data: {
+                    tab: tab,
+                    idl: idl,
+                },
+                success: function(data) {
+                    $('.list-product').html(data);
+                }
+
+            });
+        });
+    })
+</script>
