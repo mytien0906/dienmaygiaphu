@@ -1,18 +1,77 @@
 <div class="boxfooter_container">
     <div class="fixwidth">
-        <div class="row">
-            <div class="col-md-3 pl-110" >
+        <div class="row py-30">
+            <div class="col-md-3">
                 <h4 class="title">
-                    Hải sản Hoàng Gia
+                    HỖ TRỢ KHÁCH HÀNG
                 </h4>
                 <ul class="footer-list">
-                    <li><a href="goc-am-thuc">- Góc ẩm thực</a></li>
-                    <li><a href="tin-tuc">- Tin tức</a></li>
-                    <li><a href="tuyendung">- Tuyển dụng</a></li>
-                    <li><a href="lien-he">- Liên hệ</a></li>
+                    <li>
+                        <p>Hotline: <?= $optsetting['hotline'] ?></p>
+                    </li>
+                    <li>
+                        <p><?= $optsetting['giolam'] ?></p>
+                    </li>
+                    <li><a href="ho-tro-tu-van-san-pham">Hỗ trợ tư vấn sản phẩm </a></li>
+                    <li><a href="ho-tro-tu-van-mua-hang">Hỗ trợ thủ tục mua hàng </a></li>
                 </ul>
             </div>
-            <div class="col-md-3 pl-110" >
+            <div class="col-md-3">
+                <h4 class="title">
+                    GIỚI THIỆU
+                </h4>
+                <ul class="footer-list">
+                    <li><a href="gioi-thieu">GIỚI THIỆU SIÊU THỊ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4 class="title">
+                    CHĂM SÓC KHÁCH HÀNG
+                </h4>
+                <ul class="footer-list">
+                    <li>
+                        <p style="color:#ff0000;font-weight: 600;">CÔNG TY TNHH TMDV GIA PHÚ </p>
+                    </li>
+                    <li>
+                        <p style="color:#ff0000;font-weight: 600;"><?= $optsetting['masothue'] ?></p>
+                    </li>
+                    <li>
+                        <p>Gọi mua hàng : <?= $optsetting['hotline'] ?></p>
+                    </li>
+                    <li>
+                        <p>Gọi mua hàng : <?= $optsetting['hotline'] ?></p>
+                    </li>
+                    <li>
+                        <p>Gọi mua hàng : <?= $optsetting['hotline'] ?></p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <a href="" class="slogan-text">
+                    <h4 class="title">
+                        Theo Dõi Chúng Tôi
+                    </h4>
+                </a>
+                <div class="icon-block">
+                    <ul>
+                        <li>
+                            <a id="chatzalo" href="<?= preg_replace('/[^0-9]/', '', $optsetting['youtube']); ?>" title="title">
+                                <img src="assets/images/icon/mxh3-8375.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a id="chatzalo" href="<?= preg_replace('/[^0-9]/', '', $optsetting['youtube']); ?>" title="title">
+                                <img src="assets/images/icon/mxh4-6174.png" alt="">
+                            </a>
+                        </li>
+                       
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="col-md-3">
                 <div class="slogan">
                     <a id="goidien" href="tel:<?= preg_replace('/[^0-9]/', '', $optsetting['hotline']); ?>" title="title">
                         <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="upload/photo/icons8-phone.svg" alt="images">
@@ -31,7 +90,7 @@
                     </a>
                 </p>
             </div>
-            <div class="col-md-3 pl-110" >
+            <div class="col-md-3">
                 <a href="" class="slogan-text">
                     <h4 class="title">
                         Theo Dõi Chúng Tôi
@@ -84,9 +143,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 pl-110" >
+            <div class="col-md-3">
                 <a href=""><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="upload/photo/ministry-industry-trade.png" alt="" width="60%"></a>
-            </div>
+            </div> -->
         </div>
         <!-- <div class="boxfooter_left">
             <p class="boxfooter_title">Hải sản Hoàng Gia</p>

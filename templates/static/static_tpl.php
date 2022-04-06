@@ -99,19 +99,14 @@
         font-weight: 500;
     }
 </style>
-<div class="tabbed-content title">
-    <span><?= (@$title_cat != '') ? $title_cat : @$title_crumb ?></span>
-</div>
-<?php
-// var_dump(array($type)[0]).die();
-// var_dump($static['noidungvi']).die(); 
+<?php   
 ?>
+<!-- <div class="tabbed-content title">
+    <span><?= (@$title_cat != '') ? $title_cat : @$title_crumb ?></span>
+</div> -->
 <div class="content-main w-clear">
     <?= (isset($static['noidung' . $lang]) && $static['noidung' . $lang] != '') ? htmlspecialchars_decode($static['noidung' . $lang]) : '' ?>
     <?php
-    // var_dump(array($type)[0]);
-    // die();
-
     if (array($type)[0] == 'tuyendung') { ?>
         <div class="tabbed-content title">
             Vị trí tuyển dụng

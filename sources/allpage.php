@@ -35,7 +35,7 @@ $splistmenu = $d->rawQuery("select ten$lang, tenkhongdau$lang, id,photo,type fro
 //  WHERE #_product_list.id = ? AND #_product_list.type = ?",array('san-pham'));
 $newproduct = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`motanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product WHERE #_product.type = ? and #_product.hienthi > 0 ORDER BY id DESC limit 8", array('san-pham'));
 $popularproduct = $d->rawQuery("select id, `id_list`,`id_cat`,`noibat`,`photo`,`tenkhongdau$lang`,`motanganvi`,`tenvi`,`gia`,`giakm`,`giamoi`,`type` FROM #_product WHERE #_product.type = ? and #_product.hienthi > 0 and table_product.noibat>0", array('san-pham'));
-$popularnew = $d->rawQuery("select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang from #_news where hienthi>0 and noibat>0 order by stt,id desc limit 5", array('tin-tuc'));
+$popularnew = $d->rawQuery("select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang from #_news where hienthi>0 and noibat>0 order by stt,id desc", array('tin-tuc'));
 
 $criteria_list = $d->rawQuery("SELECT id,photo FROM `#_photo` WHERE type = ?", array('tieu-chi'));
 $banner_qc = $d->rawQuery("SELECT id,photo FROM `#_photo` WHERE type = ?", array('banner-qc'));

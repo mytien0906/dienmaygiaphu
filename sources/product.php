@@ -7,6 +7,7 @@ if (!defined('SOURCES')) die("Error");
 @$idi = htmlspecialchars($_GET['idi']);
 @$ids = htmlspecialchars($_GET['ids']);
 @$idb = htmlspecialchars($_GET['idb']);
+$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 
 if ($id != '') {
 	/* Lấy sản phẩm detail */

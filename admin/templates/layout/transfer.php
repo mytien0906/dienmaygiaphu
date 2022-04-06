@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="robots" content="noodp,noindex,nofollow" />
     <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
-
+    <link rel="stylesheet" type="text/css" href="assets/wowslider/engine1/style.css" />
     <style type="text/css">
         body{background:#eee}
         #alert{background:#fff;padding:20px;margin:30px auto;border-radius:3px;-webkit-box-shadow:0px 0px 3px 0px rgba(50,50,50,0.3);-moz-box-shadow:0px 0px 3px 0px rgba(50,50,50,0.3);box-shadow:0px 0px 3px 0px rgba(50,50,50,0.3);margin-top:100px;text-align:center;width:100%;max-width:400px;}

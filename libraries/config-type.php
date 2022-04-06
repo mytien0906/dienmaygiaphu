@@ -61,8 +61,9 @@
     $config['setting']['website'] = true;
     $config['setting']['fanpage'] = true;
     $config['setting']['toado'] = true;
+    $config['setting']['masothue'] = true;
     $config['setting']['tiktok'] = true;
-    $config['setting']['instagram'] = true;
+    $config['setting']['instagram'] = false;
     $config['setting']['youtube'] = true;
     $config['setting']['slogan'] = false;
     $config['setting']['giolam'] = true;

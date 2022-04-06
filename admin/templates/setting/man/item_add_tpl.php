@@ -175,18 +175,24 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
 							<input type="text" class="form-control" name="data[options][youtube]" id="youtube" placeholder="Youtube" value="<?= $options['youtube'] ?>">
 						</div>
 					<?php } ?>
-					<?php if (isset($config['setting']['tiktok']) && $config['setting']['tiktok'] == true) { ?>
+					<?php if (isset($config['setting']['masothue']) && $config['setting']['masothue'] == true) { ?>
+						<div class="form-group col-md-4 col-sm-6">
+							<label for="masothue">Mã số thuế:</label>
+							<input type="text" class="form-control" name="data[options][masothue]" id="masothue" placeholder="masothue" value="<?= $options['masothue'] ?>">
+						</div>
+					<?php } ?>
+					<!-- <?php if (isset($config['setting']['tiktok']) && $config['setting']['tiktok'] == true) { ?>
 						<div class="form-group col-md-4 col-sm-6">
 							<label for="tiktok">Tiktok:</label>
 							<input type="text" class="form-control" name="data[options][tiktok]" id="tiktok" placeholder="Tiktok" value="<?= $options['tiktok'] ?>">
 						</div>
-					<?php } ?>
-					<?php if (isset($config['setting']['instagram']) && $config['setting']['instagram'] == true) { ?>
+					<?php } ?> -->
+					<!-- <?php if (isset($config['setting']['instagram']) && $config['setting']['instagram'] == true) { ?>
 						<div class="form-group col-md-4 col-sm-6">
 							<label for="instagram">Instagram:</label>
 							<input type="text" class="form-control" name="data[options][instagram]" id="instagram" placeholder="Instagram" value="<?= $options['instagram'] ?>">
 						</div>
-					<?php } ?>
+					<?php } ?> -->
 					<?php if (isset($config['setting']['toado']) && $config['setting']['toado'] == true) { ?>
 						<div class="form-group col-md-4 col-sm-6">
 							<label for="toado">Link google map:</label>

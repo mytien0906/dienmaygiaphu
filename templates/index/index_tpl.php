@@ -123,26 +123,49 @@ if (count($splistmenu) > 0) {
     </div>
 </div>
 <!-- Tin tuc noi bat -->
-<div class="new-product">
+<div class="category-block">
     <div class="container">
         <div class="tabbed-content">
             <h3>Tin tức nổi bật</h3>
         </div>
-        <div class="row product-wrap">
-            <?php foreach ($popularnew as $k => $v) {
-                var_dump($popularnew);
+
+        <div class="row autoplay-product-list">
+            <?php foreach ($popularnew as $key => $value) {
             ?>
-                <div class="col-2 cover-content pos-relative">
-                    <a class="image" href="<?= $v['tenkhongdauvi'] ?>">
-                        <span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
-                    <a href="<?php echo $v['tenkhongdauvi'] ?>">
-                        <h6><?= $v["tenvi"] ?></h6>
+                <div class="cover-content">
+                    <a class="image" href="#">
+                        <?php if (isset($value['photo'])) {
+                        ?>
+                            <!-- <div style="
+                            background-image: url('<?= THUMBS ?>/380x270x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>');
+                            background-size: cover;
+                            height: 230px;
+                            background-repeat: no-repeat;
+                            background-position:center;
+                            "> -->
+                            <img src="<?= THUMBS ?>/380x270x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" alt="">
+                            <!-- </div> -->
+                        <?php } ?>
                     </a>
-                    
+                    <div class="news-info">
+                        <p class="time-news">
+                            <span><?= date("d", $value["ngaytao"]) ?></span>
+                            <span>Tháng <?= date("m", $value["ngaytao"]) ?></span>
+                        </p>
+                        <div class="news-des">
+                            <a href="<?= $value[$sluglang] ?>">
+                                <h5 class="news-title"><?= $value['ten' . $lang] ?></h5>
+                            </a>
+                            <p><?= $value['mota' . $lang] ?></p>
+                        </div>
+                    </div>
+
+                </div>
             <?php } ?>
         </div>
     </div>
 </div>
+
 
 <!-- <div class="box-thongke-container" id="background-thong-ke">
     <div class="fixwidth" id="background-tieuchi">

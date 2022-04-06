@@ -6,6 +6,8 @@
 	
 	$seopage = $d->rawQueryOne("select * from #_seopage where type = ? limit 0,1",array($type));
 	$banner=$seopage['banner']; 
+
+	$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 	/* SEO */
 	if(!empty($static))
 	{

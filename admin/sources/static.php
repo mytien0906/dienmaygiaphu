@@ -1,4 +1,6 @@
 <?php
+
+$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 	if(!defined('SOURCES')) die("Error");
 
 	/* Kiểm tra active static */

@@ -36,31 +36,24 @@ $linkMan = "tim-kiem";
                 </div>
             </form> -->
         </div>
-        <div class="slideshow">
-            <!-- Start WOWSlider.com BODY section -->
-            <div id="wowslider-container1">
-                <div class="ws_images">
-                    <ul>
-                        <?php foreach ($slider as $v) { ?>
-                            <li><img onerror="this.src='<?= THUMBS ?>/910x380x2/assets/images/noimage.png';" src="<?= THUMBS ?>/910x380x2/<?= UPLOAD_PHOTO_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" title="<?= $v['ten' . $lang] ?>" id="wows1_0" /></li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="ws_bullets">
-                    <div>
-                        <a href="#" title=""><span><img src="data1/tooltips/aboutsliderimg15910.jpg" alt="" />1</span></a>
-                        <a href="#" title=""><span><img src="data1/tooltips/banner0118178896.jpg" alt="" />2</span></a>
-                        <a href="#" title=""><span><img src="data1/tooltips/untitled130259554.jpg" alt="" />3</span></a>
-                        <a href="#" title=""><span><img src="data1/tooltips/untitled190751352.jpg" alt="" />4</span></a>
-                    </div>
-                </div>
-                <div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">css slider</a> by WOWSlider.com v9.0</div>
-                <div class="ws_shadow"></div>
+        <!-- Start WOWSlider.com BODY section -->
+        <div id="wowslider-container1" class="wowslider-container">
+            <div class="ws_images">
+                <ul>
+                    <?php foreach ($slider as $v) { ?>
+                        <li><img onerror="this.src='<?= THUMBS ?>/910x380x2/assets/images/noimage.png';" src="<?= THUMBS ?>/910x380x2/<?= UPLOAD_PHOTO_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" title="<?= $v['ten' . $lang] ?>" id="wows1_0" /></li>
+                    <?php } ?>
+                </ul>
             </div>
-
-            <!-- End WOWSlider.com BODY section -->
-
+            <div class="ws_bullets">
+                <div>
+                    <?php foreach ($slider as $v) { ?>
+                        <a href="#" title=""><span><?= $v['id'] ?></span></a>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
+        
     </div>
     </div>
 <?php } ?>
