@@ -38094,3 +38094,35 @@ ul.nav.nav-tabs-criteria li a.nav-link.active {
     text-align: center;
     border-top: 1px solid #a17743;
     height: 88px;font-size: 14px;}
+
+.menu ul.menu_cap_cha li {
+    position: static;
+}
+
+.menu ul.menu_cap_cha a[title='Sản phẩm'] + .sub-menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    position: absolute;
+    padding: 10px;
+}
+
+.menu ul.menu_cap_cha a[title='Sản phẩm'] + .sub-menu-list .sub-menu-item .sub-menu-cat{
+    position: static;
+    display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none;
+}
+
+.menu ul.menu_cap_cha li.sub-menu-item {
+    border: 1px solid gray;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.menu ul.menu_cap_cha li.sub-menu-item > a {
+    display: block;
+    border: 1px solid gray;
+    padding: 5px;
+}
