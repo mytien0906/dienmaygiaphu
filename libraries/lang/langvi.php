@@ -111,6 +111,7 @@ define("thongtingiaohang","Thông tin giao hàng");
 define("vuilongchontinhthanh","Vui lòng chọn tỉnh thành");
 define("yeucaukhac","Yêu cầu khác (không bắt buộc)");
 define("khongtontaisanphamtronggiohang","Không tồn tại sản phẩm nào trong giỏ hàng !");
+define("tieptucmuasam","Tiếp tục mua sắm");
 define("giohangcuaban","Giỏ hàng của bạn");
 define("vuilongchonsizevamau","Vui lòng chọn size và màu !");
 define("dangkytaiday","Đăng ký");

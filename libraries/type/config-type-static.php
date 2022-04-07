@@ -115,26 +115,64 @@ $config['static'][$nametype]['title_main'] = "Chính sách";
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
 
+// $nametype = "mua-sam";
+// $config['static'][$nametype]['title_main'] = "Mua sắm";
+// $config['static'][$nametype]['images'] = true;
+// $config['static'][$nametype]['width'] = 40;
+// $config['static'][$nametype]['height'] = 40;
+// $config['static'][$nametype]['thumb'] = '40x40x1';
+// $config['static'][$nametype]['noidung'] = true;
+// $config['static'][$nametype]['noidung_cke'] = true;
+
 $nametype = "mua-sam";
 $config['static'][$nametype]['title_main'] = "Mua sắm";
 $config['static'][$nametype]['images'] = true;
-$config['static'][$nametype]['width'] = 40;
-$config['static'][$nametype]['height'] = 40;
-$config['static'][$nametype]['thumb'] = '40x40x1';
+$config['static'][$nametype]['images2'] = false;
+$config['static'][$nametype]['file'] = false;
+$config['static'][$nametype]['tieude'] = false;
+$config['static'][$nametype]['mota'] = false;
+$config['static'][$nametype]['mota_cke'] = false;
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
+$config['static'][$nametype]['seo'] = false;
+$config['static'][$nametype]['width'] = 50;
+$config['static'][$nametype]['height'] = 50;
+$config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+$config['static'][$nametype]['file_type'] = 'doc|docx|pdf|rar|zip|ppt|pptx|DOC|DOCX|PDF|RAR|ZIP|PPT|PPTX|xls|jpg|png|gif|JPG|PNG|GIF|xls|XLS';
+
 
 $nametype = "giao-hang";
 $config['static'][$nametype]['title_main'] = "Giao hàng nhanh chóng";
 $config['static'][$nametype]['images'] = true;
+$config['static'][$nametype]['images2'] = false;
+$config['static'][$nametype]['file'] = false;
+$config['static'][$nametype]['tieude'] = false;
+$config['static'][$nametype]['mota'] = false;
+$config['static'][$nametype]['mota_cke'] = false;
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
+$config['static'][$nametype]['seo'] = false;
+$config['static'][$nametype]['width'] = 50;
+$config['static'][$nametype]['height'] = 50;
+$config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+$config['static'][$nametype]['file_type'] = 'doc|docx|pdf|rar|zip|ppt|pptx|DOC|DOCX|PDF|RAR|ZIP|PPT|PPTX|xls|jpg|png|gif|JPG|PNG|GIF|xls|XLS';
 
 $nametype = "thanh-toan-nhanh";
 $config['static'][$nametype]['title_main'] = "Thanh toán nhanh";
 $config['static'][$nametype]['images'] = true;
+$config['static'][$nametype]['images2'] = false;
+$config['static'][$nametype]['file'] = false;
+$config['static'][$nametype]['tieude'] = false;
+$config['static'][$nametype]['mota'] = false;
+$config['static'][$nametype]['mota_cke'] = false;
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
+$config['static'][$nametype]['seo'] = false;
+$config['static'][$nametype]['width'] = 50;
+$config['static'][$nametype]['height'] = 50;
+$config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+$config['static'][$nametype]['file_type'] = 'doc|docx|pdf|rar|zip|ppt|pptx|DOC|DOCX|PDF|RAR|ZIP|PPT|PPTX|xls|jpg|png|gif|JPG|PNG|GIF|xls|XLS';
+
 
 /* Footer */
 $nametype = "footer";

@@ -5,9 +5,9 @@ $idl = $_GET['idl'];
 $favicon = $d->rawQueryOne("select photo from #_photo where type = ? and act = ? and hienthi > 0 limit 0,1", array('favicon', 'photo_static'));
 $logo = $d->rawQueryOne("select id, photo from #_photo where type = ? and act = ? limit 0,1", array('logo', 'photo_static'));
 
-$muasam = $d->rawQuery("select id, noidung$lang,type from #_static where type = ? and hienthi > 0 limit 0,1", array('mua-sam'));
-$giaohang = $d->rawQuery("select id, noidung$lang,type from #_static where type = ? and hienthi > 0 limit 0,1", array('giao-hang'));
-$thanhtoan = $d->rawQuery("select id, noidung$lang,type from #_static where type = ? and hienthi > 0 limit 0,1", array('thanh-toan-nhanh'));
+$muasam = $d->rawQuery("select id, noidung$lang,type,photo from #_static where type = ? and hienthi > 0 limit 0,1", array('mua-sam'));
+$giaohang = $d->rawQuery("select id, noidung$lang,type,photo from #_static where type = ? and hienthi > 0 limit 0,1", array('giao-hang'));
+$thanhtoan = $d->rawQuery("select id, noidung$lang,type,photo from #_static where type = ? and hienthi > 0 limit 0,1", array('thanh-toan-nhanh'));
 
 // Get list services
 $dvlistmenu = $d->rawQuery("select ten$lang, tenkhongdau$lang, id,photo from #_news where type = ? and hienthi > 0 order by stt,id desc", array('dich-vu'));

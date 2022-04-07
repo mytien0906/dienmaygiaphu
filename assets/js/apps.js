@@ -236,6 +236,8 @@ $(document).ready(function () {
         centerPadding: 0,
         prevArrow: false,
         nextArrow: false,
+        respondTo: 'slider', //makes the slider to change width depending on the container it is in
+   adaptiveHeight: true, //makes the height change depending on the height of the element inside
         responsive: [{
             breakpoint: 768,
             infinite: true,

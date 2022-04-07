@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="info_btn">
-                        <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Đặt hàng</a>
+                        <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1" href="gio-hang">Đặt hàng</a>
                         <a class="btn-add" href="<?php echo $v[$slg] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
                     </div>
                 </div>

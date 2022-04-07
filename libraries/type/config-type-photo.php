@@ -40,15 +40,15 @@
     /* Slideshow */
     $nametype = "slide";
     $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slideshow";
-    $config['photo']['man_photo'][$nametype]['number_photo'] = 1;
+    $config['photo']['man_photo'][$nametype]['number_photo'] = 2;
     $config['photo']['man_photo'][$nametype]['images_photo'] = true;
     $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
     $config['photo']['man_photo'][$nametype]['link_photo'] = true;
     $config['photo']['man_photo'][$nametype]['tieude_photo'] = true;
     $config['photo']['man_photo'][$nametype]['mota_photo'] = true;
-    $config['photo']['man_photo'][$nametype]['width_photo'] = 1349;
-    $config['photo']['man_photo'][$nametype]['height_photo'] = 472;
-    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '910x380x2';
+    $config['photo']['man_photo'][$nametype]['width_photo'] = 910;
+    $config['photo']['man_photo'][$nametype]['height_photo'] = 380;
+    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
     /* Banner quang cao */
     $nametype = "banner-qc";

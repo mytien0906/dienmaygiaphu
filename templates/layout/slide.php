@@ -1,8 +1,9 @@
 <?php
 $linkMan = "tim-kiem";
 ?>
-<link rel="stylesheet" type="text/css" href="assets/wowslider/engine1/style.css" />
-<script type="text/javascript" src="assets/wowslider/engine1/jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<!-- <link rel="stylesheet" type="text/css" href="assets/wowslider/engine1/style.css" />
+<script type="text/javascript" src="assets/wowslider/engine1/jquery.js"></script> -->
 <?php if (count($slider)) { ?>
     <div class="wrap_slider">
         <div class=" d-flex justify-content-between display-blocks">
@@ -37,7 +38,7 @@ $linkMan = "tim-kiem";
             </form> -->
         </div>
         <!-- Start WOWSlider.com BODY section -->
-        <div id="wowslider-container1" class="wowslider-container">
+        <!-- <div id="wowslider-container1" class="wowslider-container">
             <div class="ws_images">
                 <ul>
                     <?php foreach ($slider as $v) { ?>
@@ -52,8 +53,18 @@ $linkMan = "tim-kiem";
                     <?php } ?>
                 </div>
             </div>
+        </div> -->
+        <div class="slideshow">
+            <div class="autoplay">
+                <?php foreach ($slider as $v) { ?>
+                    <div>
+                        <a href="<?= $v['link'] ?>" target="_blank" title="<?= $v['ten' . $lang] ?>"><img onerror="this.src='<?= THUMBS ?>/200x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/910x380x1/<?= UPLOAD_PHOTO_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" title="<?= $v['ten' . $lang] ?>" /></a>
+
+                    </div>
+                <?php } ?>
+            </div>
+
         </div>
-        
     </div>
     </div>
 <?php } ?>
@@ -62,8 +73,5 @@ $linkMan = "tim-kiem";
     <img onerror="this.src='<?=THUMBS?>/1920x506x2/assets/images/noimage.png';" src="<?=THUMBS?>/1920x506x1/<?=UPLOAD_SEOPAGE_L.$banner?>" alt="<?=$v['ten'.$lang]?>" title="<?=$v['ten'.$lang]?>"/>
 </div>  
 <?php }*/ ?>
-<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-<script type="text/javascript" src="assets/wowslider/engine1/wowslider.js"></script>
-<script type="text/javascript" src="assets/wowslider/engine1/script.js"></script>
+<!-- <script type="text/javascript" src="assets/wowslider/engine1/wowslider.js"></script>
+<script type="text/javascript" src="assets/wowslider/engine1/script.js"></script> -->

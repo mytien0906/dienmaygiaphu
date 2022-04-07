@@ -344,7 +344,7 @@
 		$params = array($type);
 
 		$curPage = $get_page;
-		$per_page = 3;
+		$per_page = 4;
 		$startpoint = ($curPage * $per_page) - $per_page;
 		$limit = " limit ".$startpoint.",".$per_page;
 		$sql = "select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang,noidung$lang from #_news where $where order by stt,id desc $limit";
@@ -353,7 +353,7 @@
 		$count = $d->rawQueryOne($sqlNum,$params);
 		$total = $count['num'];
 		$url = $func->getCurrentPageURL();
-		$pagingaa = $func->pagination($total,$per_page,$curPage,$url);
+		$paging = $func->pagination($total,$per_page,$curPage,$url);
 
 		/* breadCrumbs */
 		if(isset($title_crumb) && $title_crumb != '') $breadcr->setBreadCrumbs($com,$title_crumb);

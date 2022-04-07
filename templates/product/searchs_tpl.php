@@ -36,7 +36,7 @@
         Xem thêm
     </div>
     <div class="clear"></div>
-    <!-- <div class="paging-product"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div> -->
+    <div class="paging-product"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div>
     <?php
     ?>
     <!-- <div class="alert alert-warning" role="alert">

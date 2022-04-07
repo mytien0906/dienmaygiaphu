@@ -51,30 +51,30 @@
                     </div>
                     <div class="boxmenu_right d-flex align-items-end justify-content-between col-md-7">
                         <?php if (isset($muasam)) {
-                            var_dump($muasam);
                             foreach ($muasam as $key => $value) {
                         ?>
-                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                <a href="<?= $value['type'] ?>" class="text-center text-color text-capitalize fz-12">
                                     <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
-                                    <p><?= $value['ten' . $lang] ?></p>
+                                    <p>Mua sắm</p>
                                 </a>
                         <?php }
                         } ?>
                         <?php if (isset($giaohang)) {
                             foreach ($giaohang as $key => $value) {
+
                         ?>
-                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                <a href="<?= $value['type'] ?>" class="text-center text-color text-capitalize fz-12">
                                     <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
-                                    <p><?= $value['ten' . $lang] ?></p>
+                                    <p>Giao hàng nhanh chóng</p>
                                 </a>
                         <?php }
                         } ?>
                         <?php if (isset($thanhtoan)) {
                             foreach ($thanhtoan as $key => $value) {
                         ?>
-                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                <a href="<?= $value['type'] ?>" class="text-center text-color text-capitalize fz-12">
                                     <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
-                                    <p><?= $value['ten' . $lang] ?></p>
+                                    <p>Thanh toán nhanh</p>
                                 </a>
                         <?php }
                         } ?>

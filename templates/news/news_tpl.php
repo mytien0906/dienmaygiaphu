@@ -1,3 +1,8 @@
+<style>
+    .slideshow a img {
+        height: 350px !important;
+    }
+</style>
 <div class="tabbed-content">
     <h3>
         <?= (@$title_cat != '') ? $title_cat : @$title_crumb ?><div class="tabbed-content">
@@ -20,7 +25,8 @@
         <?php } ?>
 
         <div class="clear"></div>
-        <!-- <div cladss="paging-product"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div> -->
+    </div>
+        <div cladss="paging-product" style="margin:20px"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div>
     <?php } else { ?>
         <div class="alert alert-warning" role="alert">
             <strong><?= khongtimthayketqua ?></strong>
