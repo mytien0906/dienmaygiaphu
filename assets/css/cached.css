@@ -38095,6 +38095,16 @@ ul.nav.nav-tabs-criteria li a.nav-link.active {
     border-top: 1px solid #a17743;
     height: 88px;font-size: 14px;}
 
+.menu {
+    width: 100%;
+}
+.menu ul.menu_cap_cha {
+    position: static;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
 .menu ul.menu_cap_cha li {
     position: static;
 }
