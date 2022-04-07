@@ -287,6 +287,7 @@
 			$func->transfer("Gửi liên hệ thất bại. Vui lòng thử lại sau",$config_base, false);
 		}
 	}
+	$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 
 	/* SEO */
 	$seopage = $d->rawQueryOne("select * from #_seopage where type = ? limit 0,1",array('lien-he'));
@@ -319,4 +320,3 @@
 	/* breadCrumbs */
 	if(isset($title_crumb) && $title_crumb != '') $breadcr->setBreadCrumbs($com,$title_crumb);
 	$breadcrumbs = $breadcr->getBreadCrumbs();
-?>

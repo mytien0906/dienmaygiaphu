@@ -101,9 +101,11 @@
 </style>
 <?php   
 ?>
-<!-- <div class="tabbed-content title">
-    <span><?= (@$title_cat != '') ? $title_cat : @$title_crumb ?></span>
-</div> -->
+ <div class="tabbed-content">
+                <h3>
+                    <?= (@$title_cat != '') ? $title_cat : @$title_crumb ?><div class="tabbed-content">
+                </h3>
+            </div>
 <div class="content-main w-clear">
     <?= (isset($static['noidung' . $lang]) && $static['noidung' . $lang] != '') ? htmlspecialchars_decode($static['noidung' . $lang]) : '' ?>
     <?php

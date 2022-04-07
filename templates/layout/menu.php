@@ -50,23 +50,40 @@
                     <div class="boxmenu_middle align-self-center col-md-2">
                     </div>
                     <div class="boxmenu_right d-flex align-items-end justify-content-between col-md-7">
-                        <a href="mua-sam" class="text-center text-color text-capitalize fz-12">
-                            <img src="assets/images/icon/ts1-5163.png" alt="" class="mb-8">
-                            <p>Mua sắm</p>
-                        </a>
-                        <a href="mua-sam" class="text-center text-color text-capitalize fz-12">
-                            <img src="assets/images/icon/ts2-3411.png" alt="" class="mb-8">
-                            <p>Giao hàng nhanh chóng</p>
-                        </a>
-                        <a href="mua-sam" class="text-center text-color text-capitalize fz-12">
-                            <img src="assets/images/icon/ts3-3434.png" alt="" class="mb-8">
-                            <p>Thanh toán nhanh</p>
-                        </a>
-                        <a href="mua-sam" class="text-center text-color text-capitalize fz-12">
+                        <?php if (isset($muasam)) {
+                            var_dump($muasam);
+                            foreach ($muasam as $key => $value) {
+                        ?>
+                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                    <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
+                                    <p><?= $value['ten' . $lang] ?></p>
+                                </a>
+                        <?php }
+                        } ?>
+                        <?php if (isset($giaohang)) {
+                            foreach ($giaohang as $key => $value) {
+                        ?>
+                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                    <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
+                                    <p><?= $value['ten' . $lang] ?></p>
+                                </a>
+                        <?php }
+                        } ?>
+                        <?php if (isset($thanhtoan)) {
+                            foreach ($thanhtoan as $key => $value) {
+                        ?>
+                                <a href="<?= $value[$sluglang] ?>" class="text-center text-color text-capitalize fz-12">
+                                    <img class="mb-8" onerror="this.src='<?= THUMBS ?>/0x100x2/assets/images/noimage.png';" src="<?= THUMBS ?>/40x40x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" />
+                                    <p><?= $value['ten' . $lang] ?></p>
+                                </a>
+                        <?php }
+                        } ?>
+
+                        <a href="lien-he" class="text-center text-color text-capitalize fz-12">
                             <img src="assets/images/icon/ts4.png" alt="" class="mb-8">
                             <p>Liên hệ</p>
                         </a>
-                        <a href="mua-sam" class="text-center text-color text-capitalize fz-12">
+                        <a href="gio-hang" class="text-center text-color text-capitalize fz-12">
                             <img src="assets/images/icon/ts5.png" alt="" class="mb-8">
                             <p>Giỏ hàng</p>
                         </a>
@@ -129,8 +146,8 @@
                             <li class=" <?= $com == 'khuyen-mai' ? 'active' : '' ?>"><a href="khuyen-mai" title="Khuyến mãi">Khuyến mãi
                                 </a>
                             </li>
-                           
-                            <li class=" <?= $com == 'tuyendung' ? 'active' : '' ?>"><a href="tuyendung" title="Tuyển dụng">Tuyển dụng</a></li>
+
+                            <li class=" <?= $com == 'tuyen-dung' ? 'active' : '' ?>"><a href="tuyen-dung" title="Tuyển dụng">Tuyển dụng</a></li>
                             <li class=" <?= $com == 'dai-ly' ? 'active' : '' ?>"><a href="dai-ly" title="Đại lý">Đại lý</a></li>
                             <li class=" <?= $com == 'lien-he' ? 'active' : '' ?>"><a href="lien-he" title="LIÊN HỆ">Liên hệ</a></li>
                         </ul>

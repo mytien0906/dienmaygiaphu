@@ -53,7 +53,7 @@
 
     /* Setting */
     $config['setting']['diachi'] = true;
-    $config['setting']['dienthoai'] = false;
+    $config['setting']['dienthoai'] = true;
     $config['setting']['hotline'] = true;
     $config['setting']['zalo'] = true;
     $config['setting']['oaidzalo'] = false;

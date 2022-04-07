@@ -133,7 +133,7 @@ if (count($splistmenu) > 0) {
             <?php foreach ($popularnew as $key => $value) {
             ?>
                 <div class="cover-content">
-                    <a class="image" href="#">
+                    <a class="image" href="<?= $value[$sluglang] ?>">
                         <?php if (isset($value['photo'])) {
                         ?>
                             <!-- <div style="
@@ -143,7 +143,7 @@ if (count($splistmenu) > 0) {
                             background-repeat: no-repeat;
                             background-position:center;
                             "> -->
-                            <img src="<?= THUMBS ?>/380x270x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" alt="">
+                            <img window.location.href="<?= $value[$sluglang] ?>" src="<?= THUMBS ?>/380x270x1/<?= UPLOAD_NEWS_L . $value['photo'] ?>" alt="">
                             <!-- </div> -->
                         <?php } ?>
                     </a>

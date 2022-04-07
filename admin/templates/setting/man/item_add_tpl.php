@@ -133,7 +133,7 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
 					<?php } ?>
 					<?php if (isset($config['setting']['dienthoai']) && $config['setting']['dienthoai'] == true) { ?>
 						<div class="form-group col-md-4 col-sm-6">
-							<label for="dienthoai">Điện thoại:</label>
+							<label for="dienthoai">Tổng đài hỗ trợ:</label>
 							<input type="text" class="form-control" name="data[options][dienthoai]" id="dienthoai" placeholder="Điện thoại" value="<?= $options['dienthoai'] ?>">
 						</div>
 					<?php } ?>

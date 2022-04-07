@@ -1,30 +1,23 @@
-<h3 class="tabbed-content title"><?= (@$title_cat != '') ? $title_cat : @$title_crumb ?></h3>
-<div class="row">
-    <?php if (count($news) > 0) {
-    ?>
-        <div class="col-md-12 show-new-page">
-            <?php foreach ($news as $k => $v) { ?>
-                <div class="row mb-10 ">
-                    <div class="col-md-4">
-                        <p class="pic-news scale-img">
-                            <a class="text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['ten' . $lang] ?>"><img onerror="this.src='<?= THUMBS ?>/320x240x1/assets/images/noimage.png';" src="<?= THUMBS ?>/320x240x1/<?= UPLOAD_NEWS_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>">
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-md-8">
-
-                        <div class="info-news">
-                            <h3 class="name-news"><a class="text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['ten' . $lang] ?>"><?= $v['ten' . $lang] ?></a></h3>
-                            <p class="time-news"><?= ngaydang ?>: <?= date("d/m/Y h:i A", $v['ngaytao']) ?></p>
-                            <div class="desc-news text-split"><?= $v['mota' . $lang] ?></div>
-                        </div>
-                    </div>
+<div class="tabbed-content">
+    <h3>
+        <?= (@$title_cat != '') ? $title_cat : @$title_crumb ?><div class="tabbed-content">
+    </h3>
+</div>
+<?php if (count($news) > 0) {
+?>
+    <div class="grid-2-col">
+        <?php foreach ($news as $k => $v) { ?>
+            <div class="news">
+                <a class="text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['ten' . $lang] ?>"><img onerror="this.src='<?= THUMBS ?>/320x240x1/assets/images/noimage.png';" src="<?= THUMBS ?>/320x240x1/<?= UPLOAD_NEWS_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>">
+                </a>
+                <div class="info-news">
+                    <h3 class="name-news"><a class="text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['ten' . $lang] ?>"><?= $v['ten' . $lang] ?></a></h3>
+                    <p class="time-news"><i class="fas fa-calendar-alt"></i>: <?= date("d/m/Y h:i A", $v['ngaytao']) ?></p>
+                    <div class="desc-news text-split"><?= htmlspecialchars_decode($v['noidung' . $lang]) ?></div>
                 </div>
-            <?php } ?>
-        </div>
-        <div class="load-more" id="btn_xt">
-            Xem thêm
-        </div>
+                <a href="<?=$v[$sluglang]?>" class="btn-link">Xem thêm <i class="fas fa-chevron-double-right"></i></a>
+            </div>
+        <?php } ?>
 
         <div class="clear"></div>
         <!-- <div cladss="paging-product"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div> -->
@@ -37,54 +30,14 @@
         <strong id="alert_kq"></strong>
     </div> -->
 
-</div>
-<?php if ($noidung_pagpe != '') { ?>
-    <div class="noidung_page">
-        <div class="meta-toc">
-            <div class="box-readmore">
-                <ul class="toc-list" data-toc="article" data-toc-headings="h1, h2, h3"></ul>
-            </div>
-        </div>
-        <div id="toc-content"><?= htmlspecialchars_decode($noidung_page) ?></div>
     </div>
-<?php } ?>
-<script>
-    $(document).ready(function() {
-        var page = 1;
-        var type = "<?= $com ?>"
-        $('#btn_xt').click(function() {
-            page = page + 1;
-            $.ajax({
-                type: "GET",
-                url: "ajax/ajax_ppage.php",
-                data: {
-                    page: page,
-                    type: type,
-                },
-
-                success: function(data) {
-                    var nextPage = page + 1;
-                    $.ajax({
-                        type: "GET",
-                        url: "ajax/ajax_ppage.php",
-                        data: {
-                            page: nextPage,
-                            type: type,
-                        },
-                        success: function(data) {
-                            if (data.length <= 0) {
-                                // $('#alert_kq').html("Đã xem hết tin tức")
-
-                                $('#btn_xt').hide();
-                                // document.querySelector(".alert-warning").style.display="block";
-                                return;
-                            }
-                        }
-                    });
-                    $('.show-new-page').append(data);
-                }
-            });
-        });
-
-    });
-</script>
+    <?php if ($noidung_pagpe != '') { ?>
+        <div class="noidung_page">
+            <div class="meta-toc">
+                <div class="box-readmore">
+                    <ul class="toc-list" data-toc="article" data-toc-headings="h1, h2, h3"></ul>
+                </div>
+            </div>
+            <div id="toc-content"><?= htmlspecialchars_decode($noidung_page) ?></div>
+        </div>
+    <?php } ?>

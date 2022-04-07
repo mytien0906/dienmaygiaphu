@@ -1,5 +1,6 @@
 <?php  
 	if(!defined('SOURCES')) die("Error");
+	$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 
 	@$id = htmlspecialchars($_GET['id']);
 	@$idl = htmlspecialchars($_GET['idl']);
@@ -346,7 +347,7 @@
 		$per_page = 3;
 		$startpoint = ($curPage * $per_page) - $per_page;
 		$limit = " limit ".$startpoint.",".$per_page;
-		$sql = "select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang from #_news where $where order by stt,id desc $limit";
+		$sql = "select id, ten$lang, tenkhongdauvi, tenkhongdauen, photo, ngaytao, mota$lang,noidung$lang from #_news where $where order by stt,id desc $limit";
 		$news = $d->rawQuery($sql,$params);
 		$sqlNum = "select count(*) as 'num' from #_news where $where order by stt,id desc";
 		$count = $d->rawQueryOne($sqlNum,$params);

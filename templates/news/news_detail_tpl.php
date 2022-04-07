@@ -1,5 +1,8 @@
-<div class="tabbed-content title"><?= $title_crumb ?></div>
-<div class="main_news"><span><?= $row_detail['ten' . $lang] ?></span></div>
+<div class="tabbed-content">
+    <h3>
+    <?= $row_detail['ten' . $lang] ?>
+    </h3>
+</div>
 <?php /*<div class="time-main"><i class="fas fa-calendar-week"></i><span><?=ngaydang?>: <?=date("d/m/Y h:i A",$row_detail['ngaytao'])?></span></div>*/ ?>
 <?php if (isset($row_detail['noidung' . $lang]) && $row_detail['noidung' . $lang] != '') { ?>
     <div class="meta-toc">
@@ -37,7 +40,7 @@
                 </div>
             <?php } ?>
         </div> -->
-           
+
             <div class="clear"></div>
             <!-- <div class="pagination-home"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div> -->
         <?php } else { ?>
