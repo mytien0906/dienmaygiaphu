@@ -7,7 +7,7 @@
         height: auto;
     }
 
-    @media screen and (max-width:500px) {
+    @media screen and (max-width:992px) {
         .slideshow a img {
             height: auto !important;
         }

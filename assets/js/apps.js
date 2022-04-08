@@ -323,7 +323,7 @@ $(document).ready(function () {
                 breakpoint: 992,
                 infinite: true,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     centerMode: true,
                     centerPadding: 0,
@@ -368,11 +368,12 @@ $(document).ready(function () {
                 breakpoint: 992,
                 infinite: true,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     centerMode: true,
                     centerPadding: 0,
                 }
+                // nay ha, hay code php
             }, {
                 breakpoint: 768,
                 infinite: true,
@@ -411,7 +412,7 @@ $(document).ready(function () {
                 breakpoint: 992,
                 infinite: true,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     centerMode: true,
                     centerPadding: 0,
@@ -420,7 +421,7 @@ $(document).ready(function () {
                 breakpoint: 768,
                 infinite: true,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     centerMode: true,
                     centerPadding: 0,

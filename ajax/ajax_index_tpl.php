@@ -23,7 +23,7 @@ $con order by stt,id desc");
 
 foreach ($news_list as $key => $value) {
     $output .= '
-	<div class="col-md-3 cover-content pos-relative list-products">
+	<div class="cover-content pos-relative list-products">
 		<a class="image" href="'.$value[$sluglang].'">
 			<img onerror="this.src="thumbs/320x240x1/assets/images/noimage.png";" src="thumbs/320x240x2/' .UPLOAD_PRODUCT_L . $value["photo"] . '" alt="' . $value["tenvi"] . '">
 		</a>
