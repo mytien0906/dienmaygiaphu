@@ -38102,7 +38102,7 @@ ul.nav.nav-tabs-criteria li a.nav-link.active {
     }
 
     ul.nav.nav-tabs-criteria li a.nav-link.active {
-        padding: 10px;
+        /* padding: 10px; */
         background: #614829 !important;
         color: #fff !important;
     }
@@ -38462,4 +38462,18 @@ ul.nav.nav-tabs-criteria li a.nav-link.active {
     .cover-content {
         margin-right: 0;
     }
+}
+.empty-cart{display: block;text-align: center;}
+.empty-cart img{width: 200px;}
+.empty-cart .btn-back-home{
+    background: #e5101d;
+    color: #fff;
+    width: 200px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 7px auto;
 }

@@ -68,10 +68,10 @@ if (count($splistmenu) > 0) {
             <div class="container">
                 <div class="tabbed-content">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-md-3">
                             <h3><?= $value['ten' . $lang] ?></h3>
                         </div>
-                        <div class="col-lg-9 col-md-8">
+                        <div class="col-lg-9 col-md-9" style="text-align:right">
                             <ul class="nav nav-tabs nav-tabs-criteria" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link active" idl="<?= $value['id'] ?>" tab="hot" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="true">Hot nhất</a>

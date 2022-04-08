@@ -188,7 +188,8 @@
 			</a> -->
 			<a href="index" class="empty-cart">
 				<img data-src="//pwa.scdn.vn/static/media/cart-empty.e2664e0f.svg" alt="Giỏ hàng đang trống" class="lazy loaded" src="//pwa.scdn.vn/static/media/cart-empty.e2664e0f.svg" data-was-processed="true">
-				<p><?= tieptucmuasam ?></p>
+				<p><?= giohangdangtrong ?></p>
+				<p class="btn-back-home"><?= tieptucmuasam ?></p>
 			</a>
 		<?php } ?>
 	</div>
