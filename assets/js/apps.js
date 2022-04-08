@@ -19,23 +19,23 @@ $(".paging-product-index").each(function () {
     loadPagingAjax("ajax/ajax_product_paging.php?perpage=6", '.paging-product-index', '#load_pro_', idl);
 });
 //  Paging category ajax 
-    if($(".paging-product-category").exists()){
-        $(".paging-product-category").each(function(){
-            var list = $(this).data("list");
-            var cat = $(this).data("cat");
-            var item = $(this).data("item");
-            var namelist = $(this).data("namelist");
-            loadPagingAjax("ajax/ajax_product.php?perpage=8&idList="+list+"&idCat="+cat+"&idItem="+item+"&namelist="+namelist,'.paging-product-category-'+cat);
-        });
+if ($(".paging-product-category").exists()) {
+    $(".paging-product-category").each(function () {
+        var list = $(this).data("list");
+        var cat = $(this).data("cat");
+        var item = $(this).data("item");
+        var namelist = $(this).data("namelist");
+        loadPagingAjax("ajax/ajax_product.php?perpage=8&idList=" + list + "&idCat=" + cat + "&idItem=" + item + "&namelist=" + namelist, '.paging-product-category-' + cat);
+    });
 
-        $('.boxproitem_item').click(function(){
-            var list = $(this).data("list");
-            var cat = $(this).data("cat");
-            var item = $(this).data("item");
-            var namelist = $(this).data("namelist");
-            loadPagingAjax("ajax/ajax_product.php?perpage=8&idList="+list+"&idCat="+cat+"&idItem="+item+"&namelist="+namelist,'.paging-product-category-'+cat);
-        });
-    }
+    $('.boxproitem_item').click(function () {
+        var list = $(this).data("list");
+        var cat = $(this).data("cat");
+        var item = $(this).data("item");
+        var namelist = $(this).data("namelist");
+        loadPagingAjax("ajax/ajax_product.php?perpage=8&idList=" + list + "&idCat=" + cat + "&idItem=" + item + "&namelist=" + namelist, '.paging-product-category-' + cat);
+    });
+}
 
 /* Load more */
 NN_FRAMEWORK.loadmore = function () {
@@ -82,7 +82,7 @@ NN_FRAMEWORK.loadmore = function () {
 /* Back to top */
 NN_FRAMEWORK.BackToTop = function () {
     $(window).scroll(function () {
-        
+
 
         if (!$('.scrollToTop').length) $("body").append('<div class="scrollToTop"><img src="assets/images/icon/back_to_top.png" alt=""></div>');
         if ($(this).scrollTop() > 100) $('.scrollToTop').fadeIn();
@@ -237,7 +237,7 @@ $(document).ready(function () {
         prevArrow: false,
         nextArrow: false,
         respondTo: 'slider', //makes the slider to change width depending on the container it is in
-   adaptiveHeight: true, //makes the height change depending on the height of the element inside
+        adaptiveHeight: true, //makes the height change depending on the height of the element inside
         responsive: [{
             breakpoint: 768,
             infinite: true,
@@ -315,9 +315,9 @@ $(document).ready(function () {
         prevArrow: true,
         nextArrow: true,
         prevArrow:
-        '<span class="ap-feedback-nav-arrow ap-feedback-nav-arrow-prev d-block "><img src="/assets/images/icon/icon_l.png" alt=""></span>',
-      nextArrow:
-        '<span class="ap-feedback-nav-arrow ap-feedback-nav-arrow-next d-block "><img src="/assets/images/icon/icon_r.png" alt=""></span>',
+            '<span class="ap-feedback-nav-arrow ap-feedback-nav-arrow-prev d-block "><img src="/assets/images/icon/icon_l.png" alt=""></span>',
+        nextArrow:
+            '<span class="ap-feedback-nav-arrow ap-feedback-nav-arrow-next d-block "><img src="/assets/images/icon/icon_r.png" alt=""></span>',
         responsive: [
             {
                 breakpoint: 992,
@@ -342,10 +342,12 @@ $(document).ready(function () {
                 breakpoint: 500,
                 infinite: true,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     centerPadding: 0,
+                    centerMode: false,
+                    prevArrow: false,
+                    nextArrow: false,
                 }
             },
         ]
@@ -385,8 +387,52 @@ $(document).ready(function () {
                 breakpoint: 500,
                 infinite: true,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerMode: true,
+                    centerPadding: 0,
+                }
+            },
+        ]
+
+    });
+    $('.autoplay-list-criteria').slick({
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        centerMode: false,
+        centerPadding: 0,
+        prevArrow: false,
+        nextArrow: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                infinite: true,
+                settings: {
+                    slidesToShow: 3,
                     slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: 0,
+                }
+            }, {
+                breakpoint: 768,
+                infinite: true,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: 0,
+                }
+            },
+            {
+                breakpoint: 500,
+                autoplay: true,
+                infinite: true,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     centerMode: true,
                     centerPadding: 0,
                 }

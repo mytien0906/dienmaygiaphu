@@ -6,6 +6,12 @@
     .slick-slide {
         height: auto;
     }
+
+    @media screen and (max-width:500px) {
+        .slideshow a img {
+            height: auto !important;
+        }
+    }
 </style>
 <link rel="stylesheet" href="assets/magiczoomplus/magiczoomplus.css">
 <div class="fixwidth">

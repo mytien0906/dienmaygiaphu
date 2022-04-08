@@ -50,8 +50,7 @@
                         </div>
                     </div>
                     <div class="info_btn">
-                        <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" 
-                        title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1" href="gio-hang">Đặt hàng</a>
+                        <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1" href="gio-hang">Đặt hàng</a>
                         <a class="btn-add" href="<?php echo $v[$sluglang] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
                     </div>
                 </div>
@@ -91,12 +90,12 @@ if (count($splistmenu) > 0) {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 col-12">
                         <div class="row list-product">
 
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 mobi-d-none">
                         <div class="big-img" style="
                         background-image: url('<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $value['photo'] ?>');
                         background-size: cover;
@@ -112,15 +111,15 @@ if (count($splistmenu) > 0) {
 <!-- Banner quang cao -->
 <div class="banner-quang-cao">
     <div class="container">
-        <div class="row">
-            <?php foreach ($banner_qc as $key => $value) { ?>
-                <div class="col-md-6">
-                    <div class="link-tieu-chi">
-                        <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="/upload/photo/<?= $value['photo'] ?>" alt="">
-                    </div>
+        <div class="autoplay-list-criteria auto-height">
+            <?php foreach ($banner_qc as $key => $value) {
+            ?>
+                <div class="link-tieu-chi">
+                    <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="/upload/photo/<?= $value['photo'] ?>" alt="">
                 </div>
             <?php } ?>
         </div>
+        
     </div>
 </div>
 <!-- Tin tuc noi bat -->

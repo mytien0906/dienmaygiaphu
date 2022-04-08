@@ -2,7 +2,16 @@
     .slideshow a img {
         height: 350px !important;
     }
-    .slick-slide{height: auto;}
+
+    .slick-slide {
+        height: auto;
+    }
+
+    @media screen and (max-width:500px) {
+        .slideshow a img {
+            height: auto !important;
+        }
+    }
 </style>
 <div class="tabbed-content">
     <h3>

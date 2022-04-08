@@ -102,6 +102,11 @@
                     <a href="" class="home_mobi">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </a>
+                    <form action="tim-kiem" method="get" class="form-inline my-2 my-lg-0 frm_timkiem">
+                        <input name="keyword" autocomplete="off" type="text" class="input" id="keyword" placeholder="Nhập từ khóa tìm kiếm" onkeypress="doEnter(event,'keyword');">
+                        <button type="submit" value="" class="nut_tim" onclick="onSearch('keyword');"><i class="fal fa-search"></i></button>
+
+                    </form>
                 </div>
 
                 <div class="w-100 boxmenu_right d-flex align-self-center justify-content-between flex-wrap">

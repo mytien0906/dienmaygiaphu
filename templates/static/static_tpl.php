@@ -6,6 +6,12 @@
     .slick-slide {
         height: auto;
     }
+
+    @media screen and (max-width:500px) {
+        .slideshow a img {
+            height: auto !important;
+        }
+    }
 </style>
 <?php
 ?>

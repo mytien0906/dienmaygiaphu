@@ -1,42 +1,52 @@
-<h3 class="tabbed-content title"><?= (@$title_cat != '') ? $title_cat : @$title_crumb ?> <?= $_GET['keyword'] ?></h3>
+<style>
+    .slideshow a img {
+        height: 350px !important;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
+
+    @media screen and (max-width:500px) {
+        .slideshow a img {
+            height: auto !important;
+        }
+    }
+</style>
+<div class="tabbed-content">
+    <h3>
+        <?= (@$title_cat != '') ? $title_cat : @$title_crumb ?> <?= $_GET['keyword'] ?></h3>
+    </h3>
+</div>
 <?php if (isset($searchKey) && count($searchKey) > 0) {
     $_SESSION['keyword'] = $_GET['keyword'];
 ?>
-    <div class="row list-product">
+    <div class="row grid-5-col">
 
-        <?php foreach ($searchKey as $key => $value) {
+        <?php foreach ($searchKey as $key => $v) {
 
         ?>
-            <div class="col-2 cover-content">
-                <a href="<?= $value[$sluglang] ?>" class="image">
-                    <span>
-                        <img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" windown.location.href="<?php $value[$sluglang] ?>" src="/upload/product/<?= $value['photo'] ?>" alt="<?= $value['ten' . $lang] ?>" /></span>
+            <div class="cover-content pos-relative">
+                <a class="image" href="<?= $v['tenkhongdauvi'] ?>"><span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
+                <a href="<?php echo $v['tenkhongdauvi'] ?>">
+                    <h6><?= $v["tenvi"] ?></h6>
                 </a>
-                <a href="<?php echo $value['tenkhongdauvi'] ?>">
-                    <h6><?= $value["tenvi"] ?></h6>
-                </a>
-                <?php if ($value['motanganvi']) { ?>
-                    <div class="product-des-wrap">
-                        <p><?php echo htmlspecialchars_decode($value['motanganvi']) ?>
-                        </p>
-                    </div>
-                <?php } ?>
                 <div class="price">
                     <div>
-                        <p><?= $func->convertPrice($value['gia']) ?></p>
-                        <p class="price-discount"><?= $func->convertPrice($value['giamoi']) ?></p>
+                        <p><?= $func->convertPrice($v['gia']) ?></p>
+                        <p class="price-discount"><?= $func->convertPrice($v['giamoi']) ?></p>
                     </div>
-                    <div class="discount"><?= $func->convertPrice($value['giakm']) ?>%</div>
                 </div>
-                <a class="buy" href="lien-he">Liên hệ</a>
+                <div class="info_btn">
+                    <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Đặt hàng</a>
+                    <a class="btn-add" href="<?php echo $v[$sluglang] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
+                </div>
             </div>
         <?php } ?>
     </div>
-    <div class="load-more" id="btn_loadmore_result">
-        Xem thêm
     </div>
     <div class="clear"></div>
-    <div class="paging-product"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div>
+    <div class="pagination-home"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div>
     <?php
     ?>
     <!-- <div class="alert alert-warning" role="alert">
