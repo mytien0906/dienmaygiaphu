@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="bottom-header" id="myHeader">
-            <div class="fixwidth py-15">
+            <div>
                 <div class="menu_mobi_add"></div>
                 <div class="menu_mobi align-self-center">
                     <p class="icon_menu_mobi"><i class="fas fa-bars"></i></p>
@@ -106,7 +106,7 @@
 
                 <div class="w-100 boxmenu_right d-flex align-self-center justify-content-between flex-wrap">
                     <div class="menu">
-                        <ul class="menu_cap_cha nav">
+                        <ul class="fixwidth menu_cap_cha nav">
                             <li class=" <?= $source == 'index' ? 'active' : '' ?>"><a href="" title="TRANG CHỦ">Trang chủ</a></li>
                             <li class=" <?= $com == 'gioi-thieu' ? 'active' : '' ?>"><a href="gioi-thieu" title="Giới thiệu">Giới thiệu
                                 </a>

@@ -38139,48 +38139,46 @@ ul.nav.nav-tabs-criteria li a.nav-link.active {
     justify-content: center;
     text-align: center;
     border-top: 1px solid #a17743;
-    height: 88px;
-    font-size: 14px;
+s    height: 88px;font-size: 14px;}
+
+.menu {
+    width: 100%;
+}
+.menu ul.menu_cap_cha {
+    position: static;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
-.slick-slide {
-    box-sizing: border-box;
+.menu ul.menu_cap_cha li {
+    position: static;
 }
 
-.empty-cart {
+.menu ul.menu_cap_cha a[title='Sản phẩm'] + .sub-menu-list{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    position: absolute;
+    padding: 10px;
 }
 
-.empty-cart img {
-    width: 200px;
+.menu ul.menu_cap_cha a[title='Sản phẩm'] + .sub-menu-list .sub-menu-item .sub-menu-cat{
+    position: static;
+    display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none;
 }
 
-.empty-cart p {
-    background: #e5101d;
-    color: #fff;
-    width: 200px;
-    height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-family: 'Roboto-Regular';
-    border-radius: 5px;
+.menu ul.menu_cap_cha li.sub-menu-item {
+    border: 1px solid gray;
+    padding: 5px;
+    margin-right: 10px;
 }
 
-table {
-    width: 568px;
-    margin-bottom: 1em;
-    border-color: rgb(236, 236, 236);
-    border-collapse: collapse;
-}
-
-table tr td {
-    box-sizing: border-box;
-    padding: 5px 10px;
-    border: 1px solid rgb(236, 236, 236);
-    line-height: 1.3;
-    font-size: 14px;
+.menu ul.menu_cap_cha li.sub-menu-item > a {
+    display: block;
+    border: 1px solid gray;
+    padding: 5px;
 }
