@@ -7,6 +7,7 @@
 	/* breadCrumbs */
 	if(isset($title_crumb) && $title_crumb != '') $breadcr->setBreadCrumbs($com,$title_crumb);
 	$breadcrumbs = $breadcr->getBreadCrumbs();
+	$slider = $d->rawQuery("select ten$lang, mota$lang, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('slide'));
 
 	/* Tỉnh thành */
 	$city = $d->rawQuery("select ten, id from #_city order by id asc");

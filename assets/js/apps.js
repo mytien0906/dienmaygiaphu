@@ -343,9 +343,8 @@ $(document).ready(function () {
                 infinite: true,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     centerPadding: 0,
-                    centerMode: false,
                     prevArrow: false,
                     nextArrow: false,
                 }
