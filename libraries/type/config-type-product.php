@@ -33,13 +33,13 @@
         (
             "title_main_photo" => "Hình ảnh sản phẩm",
             "title_sub_photo" => "Hình ảnh",
-            "number_photo" => 3,
+            "number_photo" => 4,
             "images_photo" => true,
             "cart_photo" => true,
             "avatar_photo" => true,
             "tieude_photo" => true,
-            "width_photo" => 760,
-            "height_photo" => 540,
+            "width_photo" => 100,
+            "height_photo" => 100,
             "thumb_photo" => '100x100x1',
             "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
         ),
@@ -64,7 +64,7 @@
     $config['product'][$nametype]['ma'] = false;
     $config['product'][$nametype]['gia'] = true;
     $config['product'][$nametype]['giamoi'] = true;
-    $config['product'][$nametype]['giakm'] = false;
+    $config['product'][$nametype]['giakm'] = true;
     $config['product'][$nametype]['motangan'] = false;
     $config['product'][$nametype]['motangan_cke'] = false;
     $config['product'][$nametype]['mota'] = true;

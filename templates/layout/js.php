@@ -22,7 +22,7 @@ $js->setJs("./assets/js/jquery.min.js");
 $js->setJs("./assets/bootstrap/bootstrap.js");
 $js->setJs("./assets/js/wow.min.js");
 $js->setJs("./assets/owlcarousel2/owl.carousel.js");
-//$js->setJs("./assets/magiczoomplus/magiczoomplus.js");
+$js->setJs("./assets/magiczoomplus/magiczoomplus.js");
 //$js->setJs("./assets/simplyscroll/jquery.simplyscroll.js");
 //$js->setJs("./assets/slick/slick.js");
 $js->setJs("./assets/fancybox3/jquery.fancybox.js");
