@@ -113,6 +113,8 @@ $requick = array(
 	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "mua-sam", "type" => "mua-sam", 'menu' => true),
 	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "giao-hang", "type" => "giao-hang", 'menu' => true),
 	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "thanh-toan-nhanh", "type" => "thanh-toan-nhanh", 'menu' => true),
+	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "ho-tro-tu-van-san-pham", "type" => "ho-tro-tu-van-san-pham", 'menu' => true),
+	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "ho-tro-tu-van-mua-hang", "type" => "ho-tro-tu-van-mua-hang", 'menu' => true),
 	/* Tieu chi */
 
 	/* Liên hệ */
@@ -166,7 +168,7 @@ switch ($com) {
 		$seo->setSeo('type', 'object');
 		$title_crumb = 'Tính giá xây dựng';
 		break;
-	
+
 
 	case 'gioi-thieu':
 		$source = "static";
@@ -224,6 +226,20 @@ switch ($com) {
 		$seo->setSeo('type', 'article');
 		$title_crumb = 'Chính sách';
 		break;
+	case 'ho-tro-tu-van-mua-hang':
+		$source = "static";
+		$template = "static/static";
+		$type = $com;
+		$seo->setSeo('type', 'article');
+		$title_crumb = 'Hỗ trợ thủ tục mua hàng';
+		break;
+	case 'ho-tro-tu-van-san-pham':
+		$source = "static";
+		$template = "static/static";
+		$type = $com;
+		$seo->setSeo('type', 'article');
+		$title_crumb = 'Hỗ trợ tư vấn sản phẩm';
+		break;
 	case 'gioi-thieu':
 		$source = "static";
 		$template = "static/static";
@@ -263,13 +279,13 @@ switch ($com) {
 		$title_crumb = "Thông tin";
 		break;
 
-	// case 'dich-vu':
-	// 	$source = "news";
-	// 	$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-	// 	$seo->setSeo('type', isset($_GET['id']) ? "article" : "object");
-	// 	$type = $com;
-	// 	$title_crumb = "Dịch vụ";
-	// 	break;
+		// case 'dich-vu':
+		// 	$source = "news";
+		// 	$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+		// 	$seo->setSeo('type', isset($_GET['id']) ? "article" : "object");
+		// 	$type = $com;
+		// 	$title_crumb = "Dịch vụ";
+		// 	break;
 	case 'dai-ly':
 		$source = "news";
 		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";

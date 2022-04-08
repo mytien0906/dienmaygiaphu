@@ -104,12 +104,22 @@ $nametype = "lienhe";
 $config['static'][$nametype]['title_main'] = "Liên hệ";
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
-/* Chính sách khách hàng thân thiết */
+/* Hướng dẫn mua hàng */
 $nametype = "huong-dan-mua-hang";
 $config['static'][$nametype]['title_main'] = "Hướng dẫn mua hàng";
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
-/* Chính sách bảo mật thông tin */
+/* Hỗ trợ tư vấn sản phẩm */
+$nametype = "tu-van";
+$config['static'][$nametype]['title_main'] = "Hỗ trợ tư vấn sản phẩm";
+$config['static'][$nametype]['noidung'] = true;
+$config['static'][$nametype]['noidung_cke'] = true;
+/* Hỗ trợ thủ tục mua hàng */
+$nametype = "ho-tro-tu-van-mua-hang";
+$config['static'][$nametype]['title_main'] = "Hỗ trợ thủ tục mua hàng";
+$config['static'][$nametype]['noidung'] = true;
+$config['static'][$nametype]['noidung_cke'] = true;
+/* Chính sách */
 $nametype = "chinh-sach";
 $config['static'][$nametype]['title_main'] = "Chính sách";
 $config['static'][$nametype]['noidung'] = true;

@@ -1,18 +1,14 @@
+<style>
+    .slideshow a img {
+        height: 350px !important;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
+</style>
 <link rel="stylesheet" href="assets/magiczoomplus/magiczoomplus.css">
 <div class="fixwidth">
-    <!-- <div class="wrap_left_detail">
-        <div class="title-left-detail">DANH MỤC SẢN PHẨM</div>
-        <div class="catagory-list-detail">
-            <?php if ($splistmenu) { ?>
-                <ul>
-                    <?php foreach ($splistmenu as $c => $cat) { ?>
-                        <li><a title="<?= $cat['ten' . $lang] ?>" href="<?= $cat[$sluglang] ?>"><img src="assets/images/img-data/list.png"> <?= $cat['ten' . $lang] ?></a></li>
-                    <?php } ?>
-                </ul>
-            <?php } ?>
-
-        </div>
-    </div> -->
     <div class="wrap_right_detail">
         <div class="grid-pro-detail w-clear">
             <div class="left-pro-detail w-clear">
@@ -111,60 +107,34 @@
         </div>
     </div>
 </div>
-
-<div class="tabbed-content">
-    <h3>
-        Sản phẩm cùng loại
-    </h3>
-</div>
-<div class="content-main w-clear">
-    <?php if (isset($product) && count($product) > 0) {
-        // var_dump($sql);
-        // var_dump($product).die();
-    ?>
-        <!-- <div class="loadkhung_product mainkhung_product">
-            <?php foreach ($product as $k => $v) { ?>
-                <div class="boxproduct_item">
-                    <a class="boxproduct_img" href="<?= $v['tenkhongdauvi'] ?>"><span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
-                    <div class="boxproduct_info">
-                        <div class="boxproduct_name"><a href="<?= $v['tenkhongdauvi'] ?>" title="<?= $v['tenvi'] ?>"><?= $v['ten' . $lang] ?></a></div>
-                        <div class="boxproduct_price">Giá: <span><?= $func->format_money($v['gia']) ?></span></div>
-
-                    </div>
-                </div>
-            <?php } ?>
-        </div> -->
-        <div class="autoplay-product-list auto-height">
-            <?php foreach ($product as $k => $v) { ?>
-                <div class="cover-content">
+<div class="new-product">
+    <div class="container">
+        <div class="tabbed-content">
+            <h3>Sản phẩm cùng loại</h3>
+        </div>
+        <div class="autoplay-new-products auto-height">
+            <?php $product = $d->rawQuery("SELECT `id`,`id_list`,`id_cat`,`photo`,`tenkhongdauvi`,`tenkhongdauen`,`noidungen`,`noidungvi`,`motaen`,`motavi`,`tenvi`,
+             `masp`,`gia`,`giakm`,`giamoi`,`type` FROM `table_product` WHERE table_product.id_list = ? and hienthi > 0 ORDER BY id DESC", array($row_detail['id_list']));
+            foreach ($product as $k => $v) {
+            ?>
+                <div class="cover-content pos-relative">
                     <a class="image" href="<?= $v['tenkhongdauvi'] ?>">
                         <span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
                     <a href="<?php echo $v['tenkhongdauvi'] ?>">
                         <h6><?= $v["tenvi"] ?></h6>
                     </a>
-                    <?php if ($v['motanganvi']) { ?>
-                        <div class="product-des-wrap">
-                            <p><?php echo htmlspecialchars_decode($v['motanganvi']) ?>
-                            </p>
-                        </div>
-                    <?php } ?>
                     <div class="price">
                         <div>
                             <p><?= $func->convertPrice($v['gia']) ?></p>
                             <p class="price-discount"><?= $func->convertPrice($v['giamoi']) ?></p>
                         </div>
-                        <div class="discount"><?= $func->convertPrice($v['giakm']) ?>%</div>
                     </div>
-                    <a class="add" href="lien-he"><span>Liên hệ</span></a>
+                    <div class="info_btn">
+                        <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1" href="gio-hang">Đặt hàng</a>
+                        <a class="btn-add" href="<?php echo $v[$sluglang] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
+                    </div>
                 </div>
             <?php } ?>
         </div>
-        <div class="clear"></div>
-        <!-- <div class="pagination-home"><?= (isset($paging) && $paging != '') ? $paging : '' ?></div> -->
-    <?php } else { ?>
-        <div class="alert alert-warning" role="alert">
-            <strong><?= khongtimthayketqua ?></strong>
-        </div>
-    <?php } ?>
-
+    </div>
 </div>

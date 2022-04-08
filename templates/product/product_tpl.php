@@ -2,6 +2,7 @@
     .slideshow a img {
         height: 350px !important;
     }
+    .slick-slide{height: auto;}
 </style>
 <div class="tabbed-content">
     <h3>
@@ -9,9 +10,9 @@
     </h3>
 </div>
 <div class="content-main w-clear">
-    <?php if (isset($list_all_products) && count($list_all_products) > 0) { ?>
+    <?php if (isset($product) && count($product) > 0) { ?>
         <div class="row grid-5-col">
-            <?php foreach ($list_all_products as $k => $v) { ?>
+            <?php foreach ($product as $k => $v) { ?>
                 <div class="cover-content pos-relative">
                     <a class="image" href="<?= $v['tenkhongdauvi'] ?>"><span><img onerror="this.src='<?= THUMBS ?>/380x270x2/assets/images/noimage.png';" src="<?= THUMBS ?>/380x270x2/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['ten' . $lang] ?>" /></span></a>
                     <a href="<?php echo $v['tenkhongdauvi'] ?>">
@@ -25,7 +26,7 @@
                     </div>
                     <div class="info_btn">
                         <a class="btn-add btn-add-to-cart" data-option="muahang" data-id="233" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Đặt hàng</a>
-                        <a class="btn-add" href="<?php echo $v[$slg] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
+                        <a class="btn-add" href="<?php echo $v[$sluglang] ?>" title="Máy lọc nước Chungho  NEW 700 ICE" tabindex="-1">Chi tiết</a>
                     </div>
                 </div>
             <?php } ?>

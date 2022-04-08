@@ -2,6 +2,7 @@
     .slideshow a img {
         height: 350px !important;
     }
+    .slick-slide{height: auto;}
 </style>
 <div class="tabbed-content">
     <h3>
